@@ -16,8 +16,8 @@ public class EmployeTest {
 	
 	class Derived extends Employe {
 		//A decommenter quand le constructeur avec les 5 arguments est codé
-		public Derived(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-			//super(nom, prenom, matricule, dateEmbauche, salaire);
+		public Derived(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire) {
+			super(nom, prenom, matricule, dateEmbauche, salaire);
 		}
 
 		public Derived() {
