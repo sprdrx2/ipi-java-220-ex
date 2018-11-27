@@ -65,12 +65,15 @@ abstract public class Employe {
         return String.format("Employe{nom='%s', prenom='%s', matricule='%s', dateEmbauche=%s, salaire=%.1f}", this.nom, this.prenom, this.matricule, this.dateEmbauche.toString(), this.salaire);
     }*/
 
-    public static boolean equals(Object e1, Object e2) {
-        if (!(e1 instanceof Employe)) { return false; }
-        if (!(e2 instanceof Employe)) { return false; }
-        if (!Objects.deepEquals(e1, e2)) {
-            return false;
-        }
+    public boolean equals(Object o) {
+        if (!(o instanceof Employe)) { return false; }
+        if(this == o) { return true; }
+        Employe e = (Employe) o;
+        if(!(Objects.equals(this.nom, e.nom))) { return false; }
+        if(!(Objects.equals(this.prenom, e.prenom))) { return false; }
+        if(!(Objects.equals(this.matricule, e.matricule))) { return false; }
+        if(!(Objects.equals(this.salaire, e.salaire))) { return false; }
+        if(!(Objects.equals(this.dateEmbauche, e.dateEmbauche))) { return false; }
         return true;
     }
 
