@@ -53,8 +53,8 @@ public class Technicien extends Employe implements Comparable<Technicien> {
 
     @Override
     public int compareTo(Technicien t) {
-        if(this.grade < t.grade) { return 1; }
-        else if (this.grade > t.grade) { return -1; }
+        if(this.grade < t.grade) { return -1; }
+        else if (this.grade > t.grade) { return 1; }
         else { return 0; }
     }
 

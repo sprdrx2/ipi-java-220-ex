@@ -44,10 +44,12 @@ public class Manager extends Employe {
         return Entreprise.primeAnnuelleBase() + primeTechniciens;
     }
 
-    private void augmenterSalaireEquipe(Double augmentation) {
-        this.equipe.forEach(technicien -> {
-           Employe e = (Employe) technicien;
+    /*private void augmenterSalaireEquipe(Double augmentation) {
+        this.equipe.forEach(t -> {
+           Employe e = (Employe) t;
            e.augmenterSalaire(augmentation);
+           Technicien t2 = (Technicien) e;
+           System.out.println(t2);
         });
     }
 
@@ -57,12 +59,12 @@ public class Manager extends Employe {
         super.augmenterSalaire(augmentation);
     }
 
-    /*public HashSet<Technicien> equipeParGrade() {
+    public HashSet<Technicien> equipeParGrade() {
         HashSet<Technicien> techniciens = new HashSet<Technicien>();
         Stream<Technicien> streamT = this.equipe.stream();
         streamT.sorted(Comparator.comparing(Technicien::getGrade()));
         return techniciens;
-    }*/
+    }
 
     public HashSet<Technicien> equipeParGrade(Integer grade){
         HashSet<Technicien> techniciens = new HashSet<Technicien>();
@@ -78,7 +80,7 @@ public class Manager extends Employe {
 
     public Double salaireEquipeGrade1() {
         return salaireEquipeGrade(1);
-    }
+    }*/
 
     @Override
     public int hashCode() {

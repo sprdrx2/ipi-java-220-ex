@@ -86,7 +86,9 @@ abstract public class Employe {
     }
 
     public void augmenterSalaire(Double augmentation) {
-        this.salaire += this.salaire * augmentation;
+        if(this.salaire > 0.0 && augmentation > 0.0) {
+            this.salaire += this.salaire * augmentation;
+        }
     }
 
     abstract public Double getPrimeAnnuelle();
