@@ -39,7 +39,7 @@ abstract public class Employe {
         setMatricule(matricule);
         //setDateEmbauche(dateEmbauche);
         this.dateEmbauche = dateEmbauche;
-        setSalaire(salaire);
+        this.salaire = salaire;
     }
 
     public Employe() {

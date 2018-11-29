@@ -44,7 +44,7 @@ public class Manager extends Employe {
         return Entreprise.primeAnnuelleBase() + primeTechniciens;
     }
 
-    /*private void augmenterSalaireEquipe(Double augmentation) {
+    private void augmenterSalaireEquipe(Double augmentation) {
         this.equipe.forEach(t -> {
            Employe e = (Employe) t;
            e.augmenterSalaire(augmentation);
@@ -59,7 +59,7 @@ public class Manager extends Employe {
         super.augmenterSalaire(augmentation);
     }
 
-    public HashSet<Technicien> equipeParGrade() {
+    /*public HashSet<Technicien> equipeParGrade() {
         HashSet<Technicien> techniciens = new HashSet<Technicien>();
         Stream<Technicien> streamT = this.equipe.stream();
         streamT.sorted(Comparator.comparing(Technicien::getGrade()));

@@ -16,6 +16,7 @@ public class Technicien extends Employe implements Comparable<Technicien> {
     public Technicien(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Integer grade) {
         super(nom, prenom, matricule, dateEmbauche, salaire);
         this.grade = grade;
+        this.setSalaire(salaire);
     }
 
     public Integer getGrade() {
@@ -35,8 +36,16 @@ public class Technicien extends Employe implements Comparable<Technicien> {
         return "Technicien{grade="+this.grade+"} "+super.toString();
     }
 
+    /*@Override
     public Double getSalaire() {
         return super.getSalaire() + (this.getGrade() * 100);
+    }*/
+
+    @Override
+    public void setSalaire(Double salaire) {
+        Integer primeGradeTaux = this.getGrade() * 10;
+        Double primeGradeValeur = (salaire / 100.00) * primeGradeTaux;
+        super.setSalaire(salaire + primeGradeValeur);
     }
 
     public Integer getNbConges() {
@@ -53,8 +62,8 @@ public class Technicien extends Employe implements Comparable<Technicien> {
 
     @Override
     public int compareTo(Technicien t) {
-        if(this.grade < t.grade) { return -1; }
-        else if (this.grade > t.grade) { return 1; }
+        if(this.grade < t.grade) { return 1; }
+        else if (this.grade > t.grade) { return -1; }
         else { return 0; }
     }
 

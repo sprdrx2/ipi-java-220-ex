@@ -149,8 +149,8 @@ public class ManagerTest {
         Assertions.assertThat((HashSet)TestUtils.invokeGetter(d, "equipe")).isNotNull();
         Assertions.assertThat((HashSet)TestUtils.invokeGetter(d, "equipe")).hasSize(2);
         iterator = ((HashSet) TestUtils.invokeGetter(d, "equipe")).iterator();
-        Assertions.assertThat(TestUtils.invokeGetter(iterator.next(), "salaire")).isEqualTo(1500.0);
-        Assertions.assertThat(TestUtils.invokeGetter(iterator.next(), "salaire")).isEqualTo(1500.0);
+        Assertions.assertThat(TestUtils.invokeGetter(iterator.next(), "salaire")).isEqualTo(1650.0);
+        Assertions.assertThat(TestUtils.invokeGetter(iterator.next(), "salaire")).isEqualTo(1800.0);
     }
 
     @Test
@@ -183,8 +183,8 @@ public class ManagerTest {
         Assertions.assertThat((HashSet)TestUtils.invokeGetter(d, "equipe")).isNotNull();
         Assertions.assertThat((HashSet)TestUtils.invokeGetter(d, "equipe")).hasSize(2);
         iterator = ((HashSet) TestUtils.invokeGetter(d, "equipe")).iterator();
-        Assertions.assertThat(TestUtils.invokeGetter(iterator.next(), "salaire")).isEqualTo(1500.0);
-        Assertions.assertThat(TestUtils.invokeGetter(iterator.next(), "salaire")).isEqualTo(1500.0);
+        Assertions.assertThat(TestUtils.invokeGetter(iterator.next(), "salaire")).isEqualTo(1650.0);
+        Assertions.assertThat(TestUtils.invokeGetter(iterator.next(), "salaire")).isEqualTo(1800.0);
         Assertions.assertThat(TestUtils.invokeGetter(d, "salaire")).isEqualTo(1950.0);
     }
 
