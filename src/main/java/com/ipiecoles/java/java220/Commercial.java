@@ -92,5 +92,18 @@ public class Commercial extends Employe{
         }
     }
 
+    public Note getNote() {
+        return this.note;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), this.performance, this.caAnnuel, this.note);
+    }
+
+    @Override
+    public String toString() {
+        return "Commercial{caAnnuel="+this.getCaAnnuel()+",performance="+this.getPerformance()+",note="+this.getNote()+"} "+super.toString();
+    }
 
 }

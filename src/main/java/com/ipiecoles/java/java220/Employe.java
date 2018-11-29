@@ -82,7 +82,7 @@ abstract public class Employe {
     }
 
     public int hashCode() {
-        return Objects.hash(nom, prenom, matricule, dateEmbauche, salaire);
+        return Objects.hash(this.nom, this.prenom, this.matricule, this.dateEmbauche, this.salaire);
     }
 
     public void augmenterSalaire(Double augmentation) {
