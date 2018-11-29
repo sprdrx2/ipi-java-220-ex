@@ -245,6 +245,6 @@ public class ManagerTest {
         TestUtils.callMethod(d, "ajoutTechnicienEquipe", t);
         TestUtils.callMethod(d, "ajoutTechnicienEquipe", t2);
 
-        Assertions.assertThat(TestUtils.callMethod(d, "salaireEquipeGrade1")).isEqualTo(1000.0);
+        Assertions.assertThat(TestUtils.callMethod(d, "salaireEquipeGrade1")).isEqualTo(1100.0);
     }
 }

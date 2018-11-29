@@ -64,13 +64,13 @@ public class Manager extends Employe {
         Stream<Technicien> streamT = this.equipe.stream();
         streamT.sorted(Comparator.comparing(Technicien::getGrade()));
         return techniciens;
-    }
+    }*/
 
-    public HashSet<Technicien> equipeParGrade(Integer grade){
+    /*public HashSet<Technicien> equipeParGrade(Integer grade){
         HashSet<Technicien> techniciens = new HashSet<Technicien>();
         Stream<Technicien> streamT = this.equipe.stream();
         return techniciens;
-    }
+    }*/
 
     public Double salaireEquipeGrade(Integer grade) {
         Stream<Technicien> streamT = this.equipe.stream();
@@ -80,7 +80,7 @@ public class Manager extends Employe {
 
     public Double salaireEquipeGrade1() {
         return salaireEquipeGrade(1);
-    }*/
+    }
 
     @Override
     public int hashCode() {
