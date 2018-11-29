@@ -3,6 +3,7 @@ package com.ipiecoles.java.java220;
 import org.joda.time.LocalDate;
 
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.*;
 
 public class Manager extends Employe {
@@ -59,12 +60,12 @@ public class Manager extends Employe {
         super.augmenterSalaire(augmentation);
     }
 
-    /*public HashSet<Technicien> equipeParGrade() {
-        HashSet<Technicien> techniciens = new HashSet<Technicien>();
+    public ArrayList<Technicien> equipeParGrade() {
+        ArrayList<Technicien> techniciens = new ArrayList<Technicien>();
         Stream<Technicien> streamT = this.equipe.stream();
-        streamT.sorted(Comparator.comparing(Technicien::getGrade()));
+        streamT.sorted().forEach(techniciens::add);
         return techniciens;
-    }*/
+    }
 
     /*public HashSet<Technicien> equipeParGrade(Integer grade){
         HashSet<Technicien> techniciens = new HashSet<Technicien>();
